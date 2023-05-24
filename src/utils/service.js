@@ -23,4 +23,3 @@ export const processMessageToChatGPT = async (answers) => {
 
   return completion.data.choices[0].message?.content ?? "";
 };
-//TODO: mejorar promt o modelo

@@ -3,7 +3,6 @@ import Results from "./components/Results";
 import Stepper from "./components/Stepper";
 import { useStore } from "./store/zustand";
 import { ParticlesBackground } from "./components/ParticlesBackground";
-import Fade from "react-reveal/Fade";
 
 function App() {
   const loading = useStore((state) => state.loading);
@@ -33,4 +32,3 @@ function App() {
 
 export default App;
 
-// #FF7F50
