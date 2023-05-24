@@ -65,7 +65,7 @@ export default function Results() {
             </div>
             <div className="flex flex-col justify-center bg-white dark:bg-gray-900 pr-5 gap-5">
               <a
-                href={`https://en.wikipedia.org/wiki/${career.key_word}`}
+                href={`https://en.wikipedia.org/wiki/${career.career}`}
                 className="relative inline-flex items-center px-12 py-3 overflow-hidden text-lg font-medium text-indigo-100 border-2 border-indigo-600 rounded-xl hover:text-white group hover:bg-gray-900"
                 target="_blank"
                 rel="noreferrer"
