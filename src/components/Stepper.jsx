@@ -15,7 +15,6 @@ import { processMessageToChatGPT } from "../utils/service";
 
 function SwipeableTextMobileStepper() {
   const answers = useStore((state) => state.answers);
-  console.log(`🚀 ~ answers:`, answers);
   const setResults = useStore((state) => state.setResults);
   const setShowResults = useStore((state) => state.setShowResults);
   const setLoading = useStore((state) => state.setLoading);

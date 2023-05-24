@@ -4,7 +4,6 @@ import CardSkeleton from "./CardSkeleton";
 
 export default function Results() {
   const results = useStore((state) => state.results);
-  console.log(`🚀 ~ results:`, results);
   return (
     <Fade bottom cascade>
       <div className="h-[80vh]grid place-content-center w-[70vw] ">
