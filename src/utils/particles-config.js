@@ -49,7 +49,7 @@ export const particleConfig = {
     },
     move: {
       enable: true,
-      speed: 0.3,
+      speed: 0.15,
       direction: "none",
       random: false,
       straight: false,

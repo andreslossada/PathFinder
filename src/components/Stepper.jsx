@@ -69,16 +69,19 @@ function SwipeableTextMobileStepper() {
   };
 
   return (
-    <Box className="flex justify-center flex-col">
+    <Box className="flex justify-center flex-col  " component="main">
       <Box
         sx={{
-          width: "50vw",
+          // width: "80vw",
+          // lg: {
+          //   width: "50vw",
+          // },
           flexGrow: 1,
           mx: "auto",
           borderRadius: "8px",
           overflow: "hidden",
         }}
-        className="shadow-xl"
+        className="shadow-xl w-[90vw] lg:w-[50vw] "
       >
         <Paper
           square
@@ -115,20 +118,29 @@ function SwipeableTextMobileStepper() {
                 <Box
                   sx={{
                     display: "block",
-                    height: "100%",
+                    // height: "100%",
                     padding: "10px",
+                    // backgroundColor: "blue",
+                    // height: "50vh",
                   }}
                 >
                   <TextField
                     id="outlined-multiline-static"
                     helperText={`${answers[index]?.answer?.length ?? 0}/200`}
                     multiline
-                    rows={4}
+                    // rows={4}
                     fullWidth
                     inputProps={{ maxLength: 200 }}
                     sx={{
                       backgroundColor: "white",
                       borderRadius: "4px",
+                      // height: "100%",
+                      // backgroundColor: "blue",
+                      // flexGrow: 1,
+                      // display: "flex",
+                      "& .MuiInputBase-root": {
+                        // height: 250,
+                      },
                     }}
                     onChange={(event) =>
                       handleAnswerChange(index, event.target.value, question)

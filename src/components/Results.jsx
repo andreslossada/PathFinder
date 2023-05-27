@@ -6,7 +6,7 @@ export default function Results() {
   const results = useStore((state) => state.results);
   return (
     <Fade bottom cascade>
-      <div className="h-[80vh]grid place-content-center w-[70vw] ">
+      <div className="h-screen grid  place-content-center w-[95vw] xl:w-[70vw] ">
         {results?.results.length === 0 &&
           Array.from({ length: 3 }, (_, i) => {
             return (
@@ -29,9 +29,9 @@ export default function Results() {
             className="flex justify-between my-5 rounded-xl p-px bg-gradient-to-b from-blue-300 to-pink-300 dark:from-blue-800 dark:to-purple-800  overflow-hidden pb-2 static"
           >
             <span className="absolute inset-x-0 bottom-0 h-2 bg-gradient-to-r from-green-300 via-blue-500 to-purple-600"></span>
-            <div className=" bg-white dark:bg-gray-900 flex-1 px-8 py-4 ">
+            <div className=" bg-white dark:bg-gray-900 flex-1 px-8 lg:py-4 ">
               <header>
-                <h2 className=" text-3xl font-bold text-gray-800 dark:text-white pt-4">
+                <h2 className=" lg:text-3xl font-bold text-gray-800 dark:text-white pt-4">
                   {career.career}
                 </h2>
               </header>
@@ -41,7 +41,7 @@ export default function Results() {
               <p className="text-sm text-slate-400 my-4">{career.avoid}</p>
               <dl className="flex mt-4 mb-2 gap-10 justify-start">
                 <div className="flex flex-col-reverse self-start">
-                  <dt className="text-md font-medium text-slate-200">
+                  <dt className="lg:text-md font-medium text-slate-200">
                     {career.difficulty}
                   </dt>
                   <dd className="text-xs text-slate-300">Difficulty </dd>
@@ -63,10 +63,10 @@ export default function Results() {
                 </div>
               </dl>
             </div>
-            <div className="flex flex-col justify-center bg-white dark:bg-gray-900 pr-5 gap-5">
+            <div className="flex flex-col justify-center bg-white dark:bg-gray-900 pr-5 gap-5 ">
               <a
                 href={`https://en.wikipedia.org/wiki/${career.career}`}
-                className="relative inline-flex items-center px-12 py-3 overflow-hidden text-lg font-medium text-indigo-100 border-2 border-indigo-600 rounded-xl hover:text-white group hover:bg-gray-900"
+                className="relative inline-flex items-center px-3 py-2 lg:px-12 overflow-hidden text-lg font-medium text-indigo-100 border-2 border-indigo-600 rounded-xl hover:text-white group hover:bg-gray-900"
                 target="_blank"
                 rel="noreferrer"
               >
@@ -91,7 +91,7 @@ export default function Results() {
               </a>
               <a
                 href={`https://www.infojobs.net/jobsearch/search-results/list.xhtml?keyword=${career.key_word}`}
-                className="relative inline-flex items-center px-12 py-3 overflow-hidden text-lg font-medium text-indigo-100 border-2 border-indigo-600 rounded-xl hover:text-white group hover:bg-gray-900"
+                className="relative inline-flex items-center px-3 py-2 lg:px-12 overflow-hidden text-lg font-medium text-indigo-100 border-2 border-indigo-600 rounded-xl hover:text-white group hover:bg-gray-900"
                 target="_blank"
                 rel="noreferrer"
               >
