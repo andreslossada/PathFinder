@@ -1,12 +1,13 @@
 import Fade from "react-reveal/Fade";
 import { useStore } from "../store/zustand";
 import CardSkeleton from "./CardSkeleton";
+import { mock } from "../store/mocks";
 
 export default function Results() {
   const results = useStore((state) => state.results);
   return (
     <Fade bottom cascade>
-      <div className="h-screen grid  place-content-center w-[95vw] xl:w-[70vw] ">
+      <div className=" grid  place-content-center w-[95vw] xl:w-[70vw] ">
         {results?.results.length === 0 &&
           Array.from({ length: 3 }, (_, i) => {
             return (

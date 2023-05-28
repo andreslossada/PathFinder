@@ -27,10 +27,10 @@ const chatPrompt = `When I give you a series of questions and answers, I want yo
       "key_word": "programming",
       "career": "Computer Engineering",
       "difficulty": "High",
-      "description": "is a career that focuses on the study and application of principles and techniques related to computing and information technology. Professionals in this area design, develop, and manage software systems, networks, and databases , and work on the development of innovative technological solutions.",
+      "description": "A career that focuses on the study and application of principles and techniques related to computing and information technology. Professionals in this area design, develop, and manage software systems, networks, and databases , and work on the development of innovative technological solutions.",
       "salary": "$70,000/year",
       "education": "Secondary education",
-      "avoid": Not recommended if you don't like programming and solving complex problems, if you don't have logical and analytical skills, or if you're not willing to stay abreast of technological advances and learn continuously."
+      "avoid": "Not recommended if you don't like programming and solving complex problems, if you don't have logical and analytical skills, or if you're not willing to stay abreast of technological advances and learn continuously."
     }
   ]
 }

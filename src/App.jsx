@@ -5,7 +5,6 @@ import { useStore } from "./store/zustand";
 import { ParticlesBackground } from "./components/ParticlesBackground";
 
 function App() {
-  // const loading = useStore((state) => state.loading);
   // const showResults = true;
   const showResults = useStore((state) => state.showResults);
   return (

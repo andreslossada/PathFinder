@@ -21,6 +21,7 @@ export const ParticlesBackground = () => {
       init={particlesInit}
       loaded={particlesLoaded}
       options={particleConfig}
+      className="h-screen"
     />
   );
 };
