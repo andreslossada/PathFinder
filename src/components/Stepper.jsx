@@ -83,7 +83,7 @@ function SwipeableTextMobileStepper() {
           borderRadius: "8px",
           overflow: "hidden",
         }}
-        className="shadow-xl w-[90vw] lg:w-[50vw] "
+        className="shadow-2xl w-[90vw] lg:w-[50vw] "
       >
         <Paper
           square
@@ -102,7 +102,7 @@ function SwipeableTextMobileStepper() {
               opacity: 1,
               fontWeight: "bold",
             }}
-            className="text-blue-500"
+            className="text-blue-700"
           >
             {QUESTIONS[activeStep].label}
           </Typography>
