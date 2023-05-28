@@ -9,13 +9,13 @@ export default function Roadmap() {
       <div className="my-5 grid-cols-1 gap-4 m-auto">
         <div className="bg-white overflow-hidden shadow rounded-lg">
           <div className="px-4 py-5 sm:p-6">
-            <h3 className="text-lg leading-6 font-medium text-gray-900">
+            <h3 className="text-2xl leading-6 font-medium text-gray-900">
               Roadmap
             </h3>
             <div className="mt-2 max-w-xl text-sm text-gray-500">
               <p>
                 {/* This is a roadmap for the career of{" "} */}
-                <span className="font-bold">{roadMap.title}</span>
+                <span className="text-xl font-bold">{roadMap.title}</span>
               </p>
             </div>
             <div className="mt-5">
