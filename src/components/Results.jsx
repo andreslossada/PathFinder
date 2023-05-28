@@ -52,12 +52,12 @@ export default function Results() {
           results?.results.map((career, i) => (
             <div
               key={i}
-              className="flex justify-between my-5 rounded-xl p-px bg-gradient-to-b from-blue-300 to-pink-300 dark:from-blue-800 dark:to-purple-800  overflow-hidden pb-2 static"
+              className="flex justify-between my-5 rounded-xl p-px bg-gradient-to-b   from-blue-800 to-purple-800  overflow-hidden pb-2 static"
             >
               <span className="absolute inset-x-0 bottom-0 h-2 bg-gradient-to-r from-green-300 via-blue-500 to-purple-600"></span>
-              <div className=" bg-white dark:bg-gray-900 flex-1 px-8 lg:py-4 ">
+              <div className=" bg-gray-900 flex-1 px-8 lg:py-4 ">
                 <header>
-                  <h2 className=" lg:text-3xl font-bold text-gray-800 dark:text-white pt-4">
+                  <h2 className=" lg:text-3xl font-bold  text-white pt-4">
                     {career.career}
                   </h2>
                 </header>
@@ -89,7 +89,7 @@ export default function Results() {
                   </div>
                 </dl>
               </div>
-              <div className="flex flex-col justify-center bg-white dark:bg-gray-900 pr-5 gap-5 ">
+              <div className="flex flex-col justify-center  bg-gray-900 pr-5 gap-5 ">
                 <WikiButton career={career?.career} />
                 <InfoJobsButton career={career?.key_word} />
                 <button
