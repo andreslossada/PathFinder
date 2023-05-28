@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react";
 import Fade from "react-reveal/Fade";
 
-export function Searching() {
+// eslint-disable-next-line react/prop-types
+export function Searching({ label }) {
   const [dots, setDots] = useState("");
 
   useEffect(() => {
@@ -16,7 +17,7 @@ export function Searching() {
   return (
     <Fade bottom delay={1000}>
       <p className="text-lg text-white text-center relative">
-        Searching <strong className="absolute"> {dots}</strong>
+        {label} <strong className="absolute"> {dots}</strong>
       </p>
 
       <p className="text-lg text-gray-400 text-center">

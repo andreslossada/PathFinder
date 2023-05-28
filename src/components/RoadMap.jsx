@@ -2,6 +2,7 @@ import { mockRoadmap } from "../store/mocks";
 import { useStore } from "../store/zustand";
 export default function Roadmap() {
   const roadMap = useStore((state) => state.roadMap);
+  // const roadMap = mockRoadmap;
   console.log(`🚀 ~ roadMap:`, roadMap);
   return (
     <section className="h-screen grid place-content-center">
@@ -13,14 +14,14 @@ export default function Roadmap() {
             </h3>
             <div className="mt-2 max-w-xl text-sm text-gray-500">
               <p>
-                This is a roadmap for the career of{" "}
+                {/* This is a roadmap for the career of{" "} */}
                 <span className="font-bold">{roadMap.title}</span>
               </p>
             </div>
             <div className="mt-5">
               <div className="flex  flex-col">
                 {roadMap?.steps.map((step, i) => (
-                  <li key={i}>
+                  <li key={i} className="list-none my-3">
                     <div className="flex items-center">
                       <div className="flex-shrink-0">
                         <span className="h-10 w-10 rounded-full bg-blue-500 flex items-center justify-center ring-4 ring-white">

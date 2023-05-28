@@ -9,6 +9,7 @@ import { processMessageToChatGPT } from "../utils/service";
 import { ROADMAP_INITIAL_MESSAGES } from "../utils/prompts";
 import Roadmap from "./RoadMap";
 import { useState } from "react";
+import RoadmapSkeleton from "./RoadmapSkeleton";
 
 export default function Results() {
   //TODO:CHANGE TO REAL DATA
@@ -36,13 +37,13 @@ export default function Results() {
 
   return (
     <Fade bottom cascade>
-      <div className=" grid  place-content-center w-[95vw] xl:w-[70vw] ">
+      <div className=" grid  place-content-center w-[95vw] xl:w-[70vw] mt-7 ">
         {results?.results.length === 0 &&
           Array.from({ length: 3 }, (_, i) => {
             return (
               <div key={i}>
                 <CardSkeleton key={i} />
-                {i === 2 && <Searching />}
+                {i === 2 && <Searching label="Searching" />}
               </div>
             );
           })}
@@ -100,7 +101,7 @@ export default function Results() {
               </div>
             </div>
           ))}
-        {loading && <div>loading</div>}
+        {loading && <RoadmapSkeleton />}
         {showRoadMap && <Roadmap />}
       </div>
     </Fade>

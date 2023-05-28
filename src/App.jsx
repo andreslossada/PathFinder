@@ -3,6 +3,8 @@ import Results from "./components/Results";
 import Stepper from "./components/Stepper";
 import { useStore } from "./store/zustand";
 import { ParticlesBackground } from "./components/ParticlesBackground";
+import RoadmapSkeleton from "./components/RoadmapSkeleton";
+import Roadmap from "./components/RoadMap";
 
 function App() {
   // const showResults = true;
@@ -26,6 +28,8 @@ function App() {
         )}
         {showResults && <Results />}
       </div>
+      {/* <RoadmapSkeleton /> */}
+      {/* <Roadmap /> */}
     </div>
   );
 }

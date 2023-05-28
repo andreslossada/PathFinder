@@ -66,7 +66,7 @@ export const INITIAL_MESSAGES = [
   },
 ];
 
-const roadMapPromt = `When I give you a career give me a roadmap that I can follow so I can become a professional in that career. The response format will be in JSON. So if I tell you "Computer Engineering". The response should be something like this:
+const roadMapPromt = `When I give you a career give me a roadmap that I can follow so I can become a professional in that career. The response format will be in JSON. So if I tell you "Computer Engineering". An example of a response should be something like this:
 {
   title: "Becoming a Professional in Computer Engineering",
   steps: 
