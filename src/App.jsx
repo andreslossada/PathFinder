@@ -17,7 +17,7 @@ function App() {
         {!showResults && (
           <main className="h-screen grid place-content-center">
             <header className="">
-              <h1 className="bg-gradient-to-r from-blue-300 to-purple-700  bg-clip-text  font-extrabold text-transparent drop-shadow-2xl text-center tracking-wide text-6xl lg:text-9xl drop-shadow-dark">
+              <h1 className="bg-gradient-to-r from-blue-300 to-purple-700  bg-clip-text  font-extrabold text-transparent  text-center tracking-wide text-6xl lg:text-9xl drop-shadow-dark">
                 Path Finder
               </h1>
               <p className="relative text-2xl font-medium text-center text-gray-300 mb-10">

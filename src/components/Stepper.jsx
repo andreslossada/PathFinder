@@ -161,7 +161,7 @@ function SwipeableTextMobileStepper() {
             <Button
               sx={{
                 textTransform: "none",
-                paddingBottom: "20px",
+                marginBottom: "20px",
               }}
               onClick={handleNext}
               disabled={activeStep === maxSteps - 1}
@@ -178,7 +178,7 @@ function SwipeableTextMobileStepper() {
             <Button
               sx={{
                 textTransform: "none",
-                paddingBottom: "20px",
+                marginBottom: "20px",
               }}
               // size="small"
               onClick={handleBack}

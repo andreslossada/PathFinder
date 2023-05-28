@@ -9,7 +9,7 @@ export default {
         // "0 0px 25px rgba(255, 255,255, 0.5)",
       ],
       dark: [
-        "0 0px 30px rgba(0,0, 0, 0.65)",
+        "0 0px 20px rgba(0,0, 0, 0.30)",
         // "0 0px 25px rgba(0, 0,0, 0.5)",
       ],
     },
