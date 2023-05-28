@@ -3,9 +3,9 @@ import {
   ChatCompletionRequestMessageRoleEnum,
   OpenAIApi,
 } from "openai";
-import { INITIAL_MESSAGES } from "./prompts";
+// import { INITIAL_MESSAGES } from "./prompts";
 
-export const processMessageToChatGPT = async (answers) => {
+export const processMessageToChatGPT = async (answers, INITIAL_MESSAGES) => {
   const configuration = new Configuration({
     apiKey: import.meta.env.VITE_OPENAI_API_KEY,
   });

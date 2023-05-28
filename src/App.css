@@ -49,7 +49,7 @@
   border-radius: 7px;
   letter-spacing: 2px;
   font-weight: 700;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   transition: 0.5s;
   transition-property: box-shadow;
 }

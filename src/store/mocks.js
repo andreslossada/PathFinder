@@ -36,3 +36,45 @@ export const mock = {
     },
   ],
 };
+
+
+export const mockRoadmap = {
+  title: "Becoming a Professional in Computer Engineering",
+  steps: [
+    {
+      step: "Set a Clear Goal",
+      description:
+        "Define your specific interests within computer engineering. Identify areas like hardware design, software development, computer architecture, networking, or embedded systems.",
+    },
+    {
+      step: "Education",
+      description:
+        "Pursue a bachelor's degree in computer engineering or a related field. Look for accredited universities or colleges that offer comprehensive computer engineering programs. Take courses in digital logic design, programming, computer architecture, circuits, algorithms, and operating systems.",
+    },
+    {
+      step: "Gain Strong Foundations",
+      description:
+        "Develop a strong foundation in mathematics, physics, and computer science. Learn about the latest technologies and trends in the field. Get familiar with the most popular programming languages and software development tools.",
+    },
+    {
+      step: "Get Hands-on Experience",
+      description:
+        "Participate in internships and work on projects that allow you to apply your knowledge and skills in real-world settings. Look for opportunities to work with experienced professionals and learn from them.",
+    },
+    {
+      step: "Get Certified",
+      description:
+        "Get certified in the latest technologies and tools. Look for certifications that are relevant to your specific interests and career goals. Consider getting certifications in programming languages, software development tools, and operating systems.",
+    },
+    {
+      step: "Networking and Collaboration",
+      description:
+        "Join professional organizations and attend conferences and events to network with other professionals in the field. Look for opportunities to collaborate with other professionals and learn from them.",
+    },
+    {
+      step: "Stay Up to Date",
+      description:
+        "Stay up to date with the latest technologies and trends in the field. Read books, blogs, and articles about computer engineering. Follow industry leaders on social media and subscribe to their newsletters.",
+    },
+  ],
+};

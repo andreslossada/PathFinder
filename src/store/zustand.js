@@ -7,6 +7,8 @@ export const useStore = create(
     loading: false,
     results: { results: [] },
     showResults: false,
+    roadMap: { title: "", steps: [] },
+    setRoadMap: (roadMap) => set({ roadMap }),
     setShowResults: (showResults) => set({ showResults }),
     setLoading: (loading) => set({ loading }),
     setResults: (results) => set({ results }),

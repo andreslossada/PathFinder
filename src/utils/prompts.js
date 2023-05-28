@@ -1,6 +1,6 @@
 import { ChatCompletionRequestMessageRoleEnum } from "openai";
 
-const chatPrompt = `When I give you a series of questions and answers, I want you to give me 3 possible careers that I can choose from. The response format will be in JSON. I need that format to be able to read the response and display it in the UI. For example, if I ask you, "What are your interests and passions? I like programming, what skills and strengths do you have? I'm good with computers, what are your achievements and previous work experiences? I once competed in a hackathon". The response should be something like this:
+const initialPrompt = `When I give you a series of questions and answers, I want you to give me 3 possible careers that I can choose from. The response format will be in JSON. I need that format to be able to read the response and display it in the UI. For example, if I ask you, "What are your interests and passions? I like programming, what skills and strengths do you have? I'm good with computers, what are your achievements and previous work experiences? I once competed in a hackathon". The response should be something like this:
 {
   "results":
   [
@@ -62,6 +62,34 @@ export const QUESTIONS = [
 export const INITIAL_MESSAGES = [
   {
     role: ChatCompletionRequestMessageRoleEnum.System,
-    content: chatPrompt,
+    content: initialPrompt,
   },
 ];
+
+const roadMapPromt = `When I give you a career give me a roadmap that I can follow so I can become a professional in that career. The response format will be in JSON. So if I tell you "Computer Engineering". The response should be something like this:
+{
+  title: "Becoming a Professional in Computer Engineering",
+  steps: 
+    [
+      {
+        "step": "Set a Clear Goal",
+        "description": "Define your specific interests within computer engineering. Identify areas like hardware design, software development, computer architecture, networking, or embedded systems."
+      },
+      {
+        "step": "Education",
+        "description":"Pursue a bachelor's degree in computer engineering or a related field. Look for accredited universities or colleges that offer comprehensive computer engineering programs. Take courses in digital logic design, programming, computer architecture, circuits, algorithms, and operating systems."
+      }
+    ]
+}
+
+Where you can add as many steps as you feel necessary.
+`;
+
+export const ROADMAP_INITIAL_MESSAGES = [
+  {
+    role: ChatCompletionRequestMessageRoleEnum.System,
+    content: roadMapPromt,
+  },
+];
+
+

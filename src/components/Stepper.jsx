@@ -12,6 +12,7 @@ import { TextField } from "@mui/material";
 import { useStore } from "../store/zustand";
 import { QUESTIONS } from "../utils/prompts";
 import { processMessageToChatGPT } from "../utils/service";
+import { INITIAL_MESSAGES } from "../utils/prompts";
 
 function SwipeableTextMobileStepper() {
   const answers = useStore((state) => state.answers);
@@ -60,7 +61,7 @@ function SwipeableTextMobileStepper() {
     if (answersAndQuestions.length >= 1) {
       setLoading(true);
       setShowResults(true);
-      processMessageToChatGPT(answersAndQuestions.join())
+      processMessageToChatGPT(answersAndQuestions.join(), INITIAL_MESSAGES)
         .then((res) => {
           setResults(JSON.parse(res));
           setLoading(false);
