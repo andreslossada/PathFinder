@@ -5,8 +5,8 @@ import { useStore } from "./store/zustand";
 import { ParticlesBackground } from "./components/ParticlesBackground";
 
 function App() {
-  const showResults = true;
-  // const showResults = useStore((state) => state.showResults);
+  // const showResults = true;
+  const showResults = useStore((state) => state.showResults);
   return (
     <div className="bg-[conic-gradient(at_bottom_left,_var(--tw-gradient-stops))] from-indigo-900 via-black to-violet-900 flex ">
       <ParticlesBackground />

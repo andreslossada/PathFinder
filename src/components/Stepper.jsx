@@ -15,6 +15,9 @@ import { processMessageToChatGPT } from "../utils/service";
 
 function SwipeableTextMobileStepper() {
   const answers = useStore((state) => state.answers);
+
+  const searchIsDisabled = answers.length < 1;
+
   const setResults = useStore((state) => state.setResults);
   const setShowResults = useStore((state) => state.setShowResults);
   const setLoading = useStore((state) => state.setLoading);
@@ -45,6 +48,7 @@ function SwipeableTextMobileStepper() {
   };
 
   const handleClick = () => {
+    console.log("click");
     const answersAndQuestions = answers.map((answer) => {
       return `${answer?.question ?? ""} ${answer?.answer ?? ""}`;
     });
@@ -63,6 +67,7 @@ function SwipeableTextMobileStepper() {
         })
         .catch((err) => {
           console.log(err);
+          setShowResults(false);
           setLoading(false);
         });
     }
@@ -72,10 +77,6 @@ function SwipeableTextMobileStepper() {
     <Box className="flex justify-center flex-col  " component="main">
       <Box
         sx={{
-          // width: "80vw",
-          // lg: {
-          //   width: "50vw",
-          // },
           flexGrow: 1,
           mx: "auto",
           borderRadius: "8px",
@@ -118,10 +119,7 @@ function SwipeableTextMobileStepper() {
                 <Box
                   sx={{
                     display: "block",
-                    // height: "100%",
                     padding: "10px",
-                    // backgroundColor: "blue",
-                    // height: "50vh",
                   }}
                 >
                   <TextField
@@ -134,13 +132,6 @@ function SwipeableTextMobileStepper() {
                     sx={{
                       backgroundColor: "white",
                       borderRadius: "4px",
-                      // height: "100%",
-                      // backgroundColor: "blue",
-                      // flexGrow: 1,
-                      // display: "flex",
-                      "& .MuiInputBase-root": {
-                        // height: 250,
-                      },
                     }}
                     onChange={(event) =>
                       handleAnswerChange(index, event.target.value, question)
@@ -198,8 +189,11 @@ function SwipeableTextMobileStepper() {
         />
       </Box>
       <button
-        className="shadow__btn py-2 px-4 mx-auto mt-10 "
+        className={`shadow__btn py-2 px-4 mx-auto mt-10 ${
+          searchIsDisabled ? "opacity-50" : ""
+        }`}
         onClick={handleClick}
+        disabled={searchIsDisabled}
       >
         Search
       </button>
