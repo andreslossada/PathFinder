@@ -83,8 +83,10 @@ function SwipeableTextMobileStepper() {
           borderRadius: "8px",
           overflow: "hidden",
         }}
-        className="shadow-2xl w-[90vw] lg:w-[50vw] "
+        className="shadow-2xl w-[90vw] lg:w-[50vw] relative"
       >
+        <span className="absolute inset-x-0 bottom-0 h-2 bg-gradient-to-r from-green-300 via-blue-500 to-purple-600"></span>
+
         <Paper
           square
           elevation={0}
@@ -112,10 +114,10 @@ function SwipeableTextMobileStepper() {
           index={activeStep}
           onChangeIndex={handleStepChange}
           enableMouseEvents
-          className="bg-gray-100"
+          className="bg-gray-100 "
         >
           {QUESTIONS.map((question, index) => (
-            <Paper key={question.label}>
+            <Paper key={question.label} className="">
               {Math.abs(activeStep - index) <= 2 ? (
                 <Box
                   sx={{
@@ -143,12 +145,13 @@ function SwipeableTextMobileStepper() {
             </Paper>
           ))}
         </SwipeableViews>
+
         <MobileStepper
           sx={{
             backgroundColor: "white",
             height: "50px",
             "& .MuiMobileStepper-dotActive": {
-              backgroundColor: "text-red-500",
+              // backgroundColor: "text-red-500",
             },
           }}
           steps={maxSteps}
@@ -158,6 +161,7 @@ function SwipeableTextMobileStepper() {
             <Button
               sx={{
                 textTransform: "none",
+                paddingBottom: "20px",
               }}
               onClick={handleNext}
               disabled={activeStep === maxSteps - 1}
@@ -174,6 +178,7 @@ function SwipeableTextMobileStepper() {
             <Button
               sx={{
                 textTransform: "none",
+                paddingBottom: "20px",
               }}
               // size="small"
               onClick={handleBack}
@@ -189,6 +194,7 @@ function SwipeableTextMobileStepper() {
           }
         />
       </Box>
+
       <button
         className={`shadow__btn py-2 px-4 mx-auto mt-10 ${
           searchIsDisabled ? "opacity-50" : ""
