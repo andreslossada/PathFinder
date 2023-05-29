@@ -3,11 +3,11 @@ export function InfoJobsButton({ career }) {
   return (
     <a
       href={`https://www.infojobs.net/jobsearch/search-results/list.xhtml?keyword=${career}`}
-      className="relative inline-flex items-center px-3 py-2 lg:px-12 overflow-hidden text-lg font-medium text-indigo-100 border-2 border-indigo-600 rounded-xl hover:text-white group hover:bg-gray-900"
+      className="relative items-center px-3 py-2 lg:px-11 flex justify-center overflow-hidden text-lg font-medium text-indigo-100 border-2 border-[#9333ea] rounded-xl hover:text-white group hover:bg-gray-900"
       target="_blank"
       rel="noreferrer"
     >
-      <span className="absolute left-0 block w-full h-0 transition-all bg-indigo-600 opacity-100 group-hover:h-full top-1/2 group-hover:top-0 duration-400 ease"></span>
+      <span className="absolute left-0 block w-full h-0 transition-all bg-[#9333ea] opacity-100 group-hover:h-full top-1/2 group-hover:top-0 duration-400 ease"></span>
       <span className="absolute right-0 flex items-center justify-start w-10 h-10 duration-300 transform translate-x-full group-hover:translate-x-0 ease">
         <svg
           className="w-5 h-5"

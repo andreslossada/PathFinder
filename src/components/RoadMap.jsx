@@ -5,8 +5,8 @@ export default function Roadmap() {
   // const roadMap = mockRoadmap;
   console.log(`🚀 ~ roadMap:`, roadMap);
   return (
-    <section className="h-screen grid place-content-center ">
-      <div className="my-5 grid-cols-1 gap-4 m-auto rounded-xl overflow-hidden  relative">
+    <section className="h-screen grid place-content-center  ">
+      <div className="grid-cols-1 gap-4 m-auto rounded-xl overflow-hidden  relative">
         <span className="absolute inset-x-0 bottom-0 h-2 bg-gradient-to-r from-green-300 via-blue-500 to-purple-600"></span>
         <div className="bg-white overflow-hidden shadow rounded-lg">
           <div className="px-4 py-5 sm:p-6">

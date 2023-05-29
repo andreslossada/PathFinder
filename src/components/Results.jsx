@@ -37,7 +37,7 @@ export default function Results() {
 
   return (
     <Fade bottom cascade>
-      <div className=" grid  place-content-center w-[95vw] xl:w-[70vw] mt-7 ">
+      <div className=" grid  place-content-center w-[95vw] xl:w-[70vw]  ">
         {results?.results.length === 0 &&
           Array.from({ length: 3 }, (_, i) => {
             return (
@@ -52,7 +52,7 @@ export default function Results() {
           results?.results.map((career, i) => (
             <div
               key={i}
-              className="flex justify-between my-5 rounded-xl p-px bg-gradient-to-b   from-blue-800 to-purple-800  overflow-hidden pb-2 static"
+              className="flex justify-between my-5 rounded-xl p-px bg-gradient-to-b   from-blue-800 to-purple-800  overflow-hidden pb-2 static mt-7"
             >
               <span className="absolute inset-x-0 bottom-0 h-2 bg-gradient-to-r from-green-300 via-blue-500 to-purple-600"></span>
               <div className=" bg-gray-900 flex-1 px-8 lg:py-4 ">
@@ -93,7 +93,7 @@ export default function Results() {
                 <WikiButton career={career?.career} />
                 <InfoJobsButton career={career?.key_word} />
                 <button
-                  className="shadow__btn"
+                  className=" shadow__btn px-3 py-2 lg:px-12 text-lg font-medium text-indigo-100 rounded-xl hover:text-white"
                   onClick={() => handleRoadMap(career?.career)}
                 >
                   Roadmap

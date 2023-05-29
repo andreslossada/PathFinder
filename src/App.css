@@ -42,15 +42,15 @@
 } */
 
 .shadow__btn {
-  padding: 10px 20px;
+  /* padding: 10px 20px; */
   border: none;
-  font-size: 17px;
+  /* font-size: 17px; */
   color: #fff;
-  border-radius: 7px;
-  letter-spacing: 2px;
-  font-weight: 700;
+  /* border-radius: 7px; */
+  /* letter-spacing: 2px; */
+  /* font-weight: 700; */
   /* text-transform: uppercase; */
-  transition: 0.5s;
+  transition: 0.3s;
   transition-property: box-shadow;
 }
 
