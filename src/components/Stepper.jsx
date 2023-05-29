@@ -162,6 +162,7 @@ function SwipeableTextMobileStepper() {
               sx={{
                 textTransform: "none",
                 marginBottom: "20px",
+                color: "#9333ea",
               }}
               onClick={handleNext}
               disabled={activeStep === maxSteps - 1}
@@ -179,6 +180,7 @@ function SwipeableTextMobileStepper() {
               sx={{
                 textTransform: "none",
                 marginBottom: "20px",
+                color: "#3F9860",
               }}
               // size="small"
               onClick={handleBack}
