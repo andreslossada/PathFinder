@@ -5,7 +5,7 @@ export default {
     extend: {},
     dropShadow: {
       glow: [
-        "0 0px 3px rgba(255,255, 255, 0.4)",
+        "0 0px 10px rgba(255,255, 255, 0.6)",
         // "0 0px 25px rgba(255, 255,255, 0.5)",
       ],
       dark: [

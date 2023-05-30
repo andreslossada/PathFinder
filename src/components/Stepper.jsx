@@ -13,8 +13,10 @@ import { useStore } from "../store/zustand";
 import { QUESTIONS } from "../utils/prompts";
 import { processMessageToChatGPT } from "../utils/service";
 import { INITIAL_MESSAGES } from "../utils/prompts";
+import { useNavigate } from "react-router-dom";
 
 function SwipeableTextMobileStepper() {
+  const navigate = useNavigate();
   const answers = useStore((state) => state.answers);
 
   const searchIsDisabled = answers.length < 1;
@@ -49,7 +51,8 @@ function SwipeableTextMobileStepper() {
   };
 
   const handleClick = () => {
-    console.log("click");
+    navigate("/careers");
+    setAnswers([]);
     const answersAndQuestions = answers.map((answer) => {
       return `${answer?.question ?? ""} ${answer?.answer ?? ""}`;
     });
@@ -200,7 +203,7 @@ function SwipeableTextMobileStepper() {
       <button
         className={`shadow__btn py-2 px-4 mx-auto mt-10 ${
           searchIsDisabled ? "opacity-50" : ""
-        }`}
+        } text-lg font-medium text-indigo-100 rounded-xl hover:text-white tracking-widest`}
         onClick={handleClick}
         disabled={searchIsDisabled}
       >
