@@ -71,8 +71,7 @@ function SwipeableTextMobileStepper() {
         })
         .catch((err) => {
           console.log(err);
-          setShowResults(false);
-          setLoading(false);
+          navigate("/");
         });
     }
   };
